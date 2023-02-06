@@ -357,12 +357,10 @@ def start_app(app_name):
 
     globalvar.current_process = None   
 
-    # if app_name == "dist_detect":
-    #     globalvar.current_process = vf_main.app_vf_start()
-    #     if globalvar.click_screenshot:
-    #         screenShot()    #如果剛進系統還停在截圖模式 請重新呼叫跑即時影像流
-    if app_name == "object_detect":
+    if app_name == "dist_detect":
         globalvar.current_process = vf_main.app_vf_start()
+        if globalvar.click_screenshot:
+            screenShot()    #如果剛進系統還停在截圖模式 請重新呼叫跑即時影像流
     
     current_app = app_name
     is_app_running = True
